@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<root>
+    <msg>success</msg>
+    <content modelName="银行回单">
+        <_MingCheng/>null
+        <_DanJuLeiXing>中国银行_收款</_DanJuLeiXing>
+        <_DanJuMingCheng/>null
+        <_YinHangMingCheng/>null
+        <_KeHuHao height="47" left="377" top="266" width="350">110471867</_KeHuHao>
+        <_JiaoYiRiQi height="45" left="1244" top="277" width="400">2016年09月08日</_JiaoYiRiQi>
+        <_ShouKuanFangYinHangZhangHao height="64" left="77" top="310" width="489">123912372612
+        </_ShouKuanFangYinHangZhangHao>
+        <_FuKuanFangYinHangZhangHao height="45" left="1096" top="329" width="627">15001617336052500561
+        </_FuKuanFangYinHangZhangHao>
+        <_ShouKuanFangMingCheng height="62" left="89" top="368" width="627">四川光发科技有限公司</_ShouKuanFangMingCheng>
+        <_FuKuanFangMingCheng height="62" left="1098" top="375" width="996">内蒙古广播电视网络集团有限公司根河分公</_FuKuanFangMingCheng>
+        <_ShouKuanFangKaiHuYinHang height="72" left="77" top="475" width="702">中国银行绵阳涪城支行</_ShouKuanFangKaiHuYinHang>
+        <_FuKuanFangKaiHuYinHang height="54" left="1094" top="493" width="912">中国建设银行股份有限公司根河支行
+        </_FuKuanFangKaiHuYinHang>
+        <_JinE height="47" left="77" top="598" width="345">CNY3,000.00人民币叁仟元整</_JinE>
+        <_BaoWenZhongLei height="62" left="85" top="710" width="877">beps.121.001.01-客户发起普通贷记业务报文</_BaoWenZhongLei>
+        <_YeWuZhongLei height="54" left="83" top="754" width="408">A100-普通汇兑</_YeWuZhongLei>
+        <_YeWuBiaoShiHao height="47" left="79" top="802" width="502">2016090804707383</_YeWuBiaoShiHao>
+        <_YeWuBianHao/>？？?
+        <_ShouZhiShenBaoHao height="47" left="1098" top="768" width="202">A100-普通汇兑</_ShouZhiShenBaoHao>
+        <_FaQiHangHangHao height="43" left="87" top="848" width="416">105196873369</_FaQiHangHangHao>
+        <_FaQiHangMingCheng height="52" left="85" top="894" width="779">中国建设银行股份有限公司根河支行</_FaQiHangMingCheng>
+        <_JieShouHangHangHao height="47" left="1096" top="856" width="420">104659017010</_JieShouHangHangHao>
+        <_JieShouHangMingCheng height="54" left="1098" top="900" width="771">中国银行股份有限公司绵阳涪城支行</_JieShouHangMingCheng>
+        <_RuZhangZhangHao height="62" left="83" top="987" width="406">123912372612</_RuZhangZhangHao>
+        <_RuZhangHuMing height="43" left="1098" top="1012" width="525">四川光发科技有限公司</_RuZhangHuMing>
+        <_YongTu height="58" left="81" top="1096" width="102">四川光发科技有限公司</_YongTu>
+        <_FuYan height="54" left="87" top="1210" width="483">材料费(工程13号合同)</_FuYan>
+        <_JiaoYiJiGouDaiMa height="43" left="91" top="1525" width="273">415370</_JiaoYiJiGouDaiMa>
+        <_JiaoYiFangShi height="43" left="468" top="1531" width="260">其他</_JiaoYiFangShi>
+        <_JiaoYiLiuShuiHao/>???
+        <_HuiDanBianHao/>????
+        <_YanZhengMa/>????
+        <_DaYinRiQi/>????
+    </content>
+</root>

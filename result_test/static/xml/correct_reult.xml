@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+     <errorcode>0</errorcode>
+     <errormsg>null</errormsg>
+     <recogContent>
+        <_DanJuMingCheng width="380" top="27" height="69" left="962">客户收付款入账通知</_DanJuMingCheng>
+        <_YinHangMingCheng width="419" top="71" height="71" left="306">中国农业银行</_YinHangMingCheng>
+        <_FukuanFangHuMing width="673" top="140" height="50" left="283">绵阳创新资产经营管理有限公司</_FukuanFangHuMing>
+        <_FuKuanFangZhangHao width="521" top="193" height="50" left="200">22231101040000561</_FuKuanFangZhangHao>
+        <_FuKuanFangKaiHuHang width="833" top="239" height="57" left="163">中国农业银行绵阳科创园分里处</_FuKuanFangKaiHuHang>
+        <_ShouKuanFangHuMing width="715" top="286" height="59" left="163">绵阳高新区金名伟业广告部</_ShouKuanFangHuMing>
+        <_ShouKuanFangZhangHao width="440" top="341" height="50" left="161">123934421724</_ShouKuanFangZhangHao>
+        <_ShouKuanFangKaiHuHang width="526" top="385" height="62" left="156">104659011043</_ShouKuanFangKaiHuHang>
+        <_RuZhangRiQi width="526" top="385" height="62" left="156">20160503</_RuZhangRiQi>
+        <_XiaoXieJinE width="733" top="433" height="62" left="166">5983.00</_XiaoXieJinE>
+        <_DaXieJinE width="556" top="438" height="59" left="1186">伍仟玖佰捌拾叁元整</_DaXieJinE>
+        <_FuKuanFangZhangBuBianHao width="295" top="692" height="53" left="161">null</_FuKuanFangZhangBuBianHao>
+        <_FuKuanFangZhangBuMingChen width="325" top="738" height="66" left="163">null</_FuKuanFangZhangBuMingChen>
+        <_ShouKuanFangZhangBuBianHao width="304" top="786" height="66" left="154">null</_ShouKuanFangZhangBuBianHao>
+        <_ShouKuanFangZhangBuMingChen width="274" top="844" height="48" left="166">null</_ShouKuanFangZhangBuMingChen>
+        <_ZhaiYao width="251" top="893" height="50" left="207">转长取款</_ZhaiYao>
+        <_FuYan width="334" top="939" height="57" left="166">广告制作费</_FuYan>
+        <_DaYinRiQi width="516" top="992" height="50" left="166">20160504</_DaYinRiQi>
+        <_HangHao width="516" top="992" height="50" left="166">-</_HangHao>
+        <_DaYinGuiYuan width="276" top="992" height="50" left="865">9999</_DaYinGuiYuan>
+        <_YeMa width="219" top="992" height="48" left="1467">.21]</_YeMa>
+     </recogContent>
+</root>
