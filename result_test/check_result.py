@@ -86,8 +86,6 @@ class ResultTest(object):
         sum_str = ''
         # 匹配上的字符
         correct_str = ''
-        # 总字段数
-        sum_col = len(CORRECT_RESULT)
         # 匹配上的字段数
         correct_col = 0
         # 调用接口获取数据（测试张图片）
@@ -100,14 +98,30 @@ class ResultTest(object):
         tree = XmlTree.fromstring(result.encode('utf-8'))
         content = tree.find('content')
         for k, v in CORRECT_RESULT.items():
-            k_elem = content.find(k)
+            if not v:
+                del CORRECT_RESULT[k]
+                continue
+            try:
+                k_elem = content.find(k)
+            except KeyError,e:
+                print e
+                print '{fileName} was lack columns: {colName}'.format(fileName=os.path.split(file_name)[-1], colName=k)
+                print '---------------------------------------------------------------------'
+                continue
             text = k_elem.text if k_elem is not None else ''
+            if text == '':
+                print '{fileName} '
             sum_str += v
             correct_str += ResultTest.find_correct_char(text, v) if text else ''
-            correct_col += 1 if text == v else 0
+            if text == v:
+                correct_col += 1
+            else:
+
+                print '{fileName} was lack columns: {colName}'.format(fileName=os.path.split(file_name)[-1], colName=k)
+                print '---------------------------------------------------------------------'
             # print node.text
         char_ratio = len(correct_str) * 1.0 / len(sum_str)
-        col_ratio = correct_col * 1.0 / sum_col
+        col_ratio = correct_col * 1.0 / len(CORRECT_RESULT)
         return char_ratio, col_ratio
 
     @staticmethod
