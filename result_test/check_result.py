@@ -51,7 +51,7 @@ class ResultTest(object):
             result = json_data['datas'][0]['xml']
         except Exception, e:
             print e
-            result == 'bad result'
+            result == 'bad ocr result'
 
         return result
 
@@ -82,6 +82,7 @@ class ResultTest(object):
         constant_name = os.path.split(file_name)[-1].split('.')[0]
         constant_module = __import__(dir_name)
         CORRECT_RESULT = constant_module.GetConstant().get_constant(constant_name)
+        fail_list = []
         # 总字符
         sum_str = ''
         # 匹配上的字符
@@ -95,6 +96,7 @@ class ResultTest(object):
         # 读xml获取数据
         # file_path = os.path.join(XML_DIR, 'longwan.xml')
         # result = read_file(file_path)
+
         tree = XmlTree.fromstring(result.encode('utf-8'))
         content = tree.find('content')
         for k, v in CORRECT_RESULT.items():
@@ -103,10 +105,11 @@ class ResultTest(object):
                 continue
             try:
                 k_elem = content.find(k)
-            except KeyError,e:
+            except KeyError, e:
                 print e
                 print '{fileName} was lack columns: {colName}'.format(fileName=os.path.split(file_name)[-1], colName=k)
                 print '---------------------------------------------------------------------'
+                fail_list.append(k)
                 continue
             text = k_elem.text if k_elem is not None else ''
             if text == '':
@@ -116,13 +119,13 @@ class ResultTest(object):
             if text == v:
                 correct_col += 1
             else:
-
+                fail_list.append(k)
                 print '{fileName} was lack columns: {colName}'.format(fileName=os.path.split(file_name)[-1], colName=k)
                 print '---------------------------------------------------------------------'
-            # print node.text
+                # print node.text
         char_ratio = len(correct_str) * 1.0 / len(sum_str)
         col_ratio = correct_col * 1.0 / len(CORRECT_RESULT)
-        return char_ratio, col_ratio
+        return char_ratio, col_ratio, fail_list
 
     @staticmethod
     def get_abspath(file_name):
@@ -171,14 +174,15 @@ class ResultTest(object):
             file_count = 0
             self.result['dir'][dir_name] = {}
             for file in dir_file_list:
-                char_ratio, col_ratio = ResultTest.check_data(dir_name, file)
+                char_ratio, col_ratio, fail_list = ResultTest.check_data(dir_name, file)
                 print 'image %s : ' % file
                 print PRINT_INFO_CHAR.format(ratio=char_ratio)
                 print PRINT_INFO_COL.format(ratio=col_ratio)
                 dir_char_ratio += char_ratio
                 dir_col_ratio += col_ratio
                 file_count += 1
-                self.result['dir'][dir_name][file] = {'char_ratio': char_ratio, 'col_ratio': col_ratio}
+                self.result['dir'][dir_name][file] = {'char_ratio': char_ratio, 'col_ratio': col_ratio,
+                                                      'ocr_fail': fail_list}
             dir_char_ratio = dir_char_ratio / file_count if file_count else 0
             dir_col_ratio = dir_col_ratio / file_count if file_count else 0
             self.result['dir'][dir_name]['dir'] = {'char_ratio': dir_char_ratio, 'col_ratio': dir_col_ratio}
