@@ -6,7 +6,7 @@ u'''
   作    者   : 张茗 
   生成日期   : 2017年4月21日
   最近修改   :
-  功能描述   : 测试龙湾OCR的接口返回数据的识别率
+  功能描述   : 测试OCR的接口返回数据的识别率
   函数列表   : 
   修改历史   :
     1、日    期   : 2017年4月21日
@@ -45,7 +45,7 @@ class ResultTest(object):
         files = {
             'image': open(file_path, 'rb'),
         }
-        req = requests.post(url=LONG_WAN_URL, files=files, data={'token': TOCKEN})
+        req = requests.post(url=URL, files=files, data={'token': TOCKEN})
         try:
             json_data = json.loads(req.text)
             result = json_data['datas'][0]['xml']
