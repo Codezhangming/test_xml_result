@@ -31,8 +31,8 @@ XML_DIR = os.path.join(STATIC_DIR, 'xml')
 
 
 # 龙湾相关的常量在这里配置
-LONG_WAN_URL = 'http://demo.longwend.com/ocr/api/v1.0/tickets'
-TOCKEN = '24b1a094054940dca2e757c893fb7b6e'
+URL = ''
+TOCKEN = ''
 
 # 输出信息
 PRINT_INFO_CHAR = u'总字符识别度：{ratio}'
